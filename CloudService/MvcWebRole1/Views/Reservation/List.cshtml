@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MvcWebRole1.Models.ReservationDetail>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReservationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReservationMade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfSeats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeatsReservedFor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReservationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReservationMade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfSeats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeatsReservedFor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDeleted)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.ReservationId }, new { @class = "deleteLink", resid = item.ReservationId })
+        </td>
+    </tr>
+}
+</table>
+
+@section Scripts {
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".deleteLink").click(function (e) {
+            e.preventDefault();
+            var reasonStr = prompt("Why are you cancelling?"),
+                resid = $(this).attr('resid');
+            $.ajax({
+                url: '/Reservation/Delete?id=' + resid + '&reason=' + reasonStr,
+                type: 'DELETE',
+                cache: false,
+                async: false,
+                error: function () { alert('boo'); },
+                success: function () { document.location = '/Reservation/CancelConfirmation?id=' + resid; }
+            });
+        });
+    });
+</script>
+    }

@@ -1,0 +1,210 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{DCE18939-E439-4ABD-8F6A-64312C0EE59C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{BB87CD30-BD27-42B8-9785-613D03CF79FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Eventing", "Eventing", "{9D029129-61D7-419A-B1FD-69D625C6AE52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{1CB511C0-DA86-4E38-BC33-18071E38D512}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0BBD1CA5-B085-4E60-BA87-B64DBB04D044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Cqrs.Commands", "AgileWays.Cqrs.Commands\AgileWays.Cqrs.Commands.csproj", "{25897D59-0EAE-432D-8D18-E5754BADF494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Cqrs.Commands.Writer", "AgileWays.Cqrs.Commands.Writer\AgileWays.Cqrs.Commands.Writer.csproj", "{91E6C688-E04D-49B0-BE70-38F5651EA0E2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25897D59-0EAE-432D-8D18-E5754BADF494} = {25897D59-0EAE-432D-8D18-E5754BADF494}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Cqrs.Commanding", "AgileWays.Cqrs.Commanding\AgileWays.Cqrs.Commanding.csproj", "{CA313D87-770D-41FB-A2DB-91C8C53C676A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25897D59-0EAE-432D-8D18-E5754BADF494} = {25897D59-0EAE-432D-8D18-E5754BADF494}
+		{FF1D2DFF-DEBC-408E-A004-58250AC245D5} = {FF1D2DFF-DEBC-408E-A004-58250AC245D5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandHost", "CommandHost\CommandHost.csproj", "{C5C1E6C7-2B11-4D44-9E87-4DD81B06014E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25897D59-0EAE-432D-8D18-E5754BADF494} = {25897D59-0EAE-432D-8D18-E5754BADF494}
+		{ABCE536E-31DA-46DA-8352-395F4A6458BA} = {ABCE536E-31DA-46DA-8352-395F4A6458BA}
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9} = {E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}
+		{CA313D87-770D-41FB-A2DB-91C8C53C676A} = {CA313D87-770D-41FB-A2DB-91C8C53C676A}
+		{91E6C688-E04D-49B0-BE70-38F5651EA0E2} = {91E6C688-E04D-49B0-BE70-38F5651EA0E2}
+		{8584768C-30FF-42E7-9D85-743CD57DCD95} = {8584768C-30FF-42E7-9D85-743CD57DCD95}
+		{96B578F6-4346-4050-8D3B-8B78146AB214} = {96B578F6-4346-4050-8D3B-8B78146AB214}
+		{FF1D2DFF-DEBC-408E-A004-58250AC245D5} = {FF1D2DFF-DEBC-408E-A004-58250AC245D5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Cqrs.Eventing", "AgileWays.Cqrs.Eventing\AgileWays.Cqrs.Eventing.csproj", "{96B578F6-4346-4050-8D3B-8B78146AB214}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Cqrs.Events", "AgileWays.Cqrs.Events\AgileWays.Cqrs.Events.csproj", "{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{96B578F6-4346-4050-8D3B-8B78146AB214} = {96B578F6-4346-4050-8D3B-8B78146AB214}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Cqrs.Eventing.Handler", "AgileWays.Cqrs.Eventing.Handler\AgileWays.Cqrs.Eventing.Handler.csproj", "{ABCE536E-31DA-46DA-8352-395F4A6458BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF358621-2190-4D6C-BB64-DC25C8C7A6FF} = {AF358621-2190-4D6C-BB64-DC25C8C7A6FF}
+		{02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9} = {02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9}
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9} = {E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}
+		{96B578F6-4346-4050-8D3B-8B78146AB214} = {96B578F6-4346-4050-8D3B-8B78146AB214}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Cqrs.Domain", "AgileWays.Cqrs.Domain\AgileWays.Cqrs.Domain.csproj", "{FF1D2DFF-DEBC-408E-A004-58250AC245D5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABCE536E-31DA-46DA-8352-395F4A6458BA} = {ABCE536E-31DA-46DA-8352-395F4A6458BA}
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9} = {E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}
+		{96B578F6-4346-4050-8D3B-8B78146AB214} = {96B578F6-4346-4050-8D3B-8B78146AB214}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Cqrs.Domain.Conference", "AgileWays.Cqrs.Domain.Conference\AgileWays.Cqrs.Domain.Conference.csproj", "{8584768C-30FF-42E7-9D85-743CD57DCD95}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25897D59-0EAE-432D-8D18-E5754BADF494} = {25897D59-0EAE-432D-8D18-E5754BADF494}
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9} = {E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}
+		{96B578F6-4346-4050-8D3B-8B78146AB214} = {96B578F6-4346-4050-8D3B-8B78146AB214}
+		{FF1D2DFF-DEBC-408E-A004-58250AC245D5} = {FF1D2DFF-DEBC-408E-A004-58250AC245D5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservationConsole", "ReservationConsole\ReservationConsole.csproj", "{E4574567-012C-4BC7-83D5-0F50E5FD8679}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25897D59-0EAE-432D-8D18-E5754BADF494} = {25897D59-0EAE-432D-8D18-E5754BADF494}
+		{91E6C688-E04D-49B0-BE70-38F5651EA0E2} = {91E6C688-E04D-49B0-BE70-38F5651EA0E2}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{308D541E-5BFD-4722-BA7C-F81E9A1868DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Repository", "AgileWays.Repository\AgileWays.Repository.csproj", "{AF358621-2190-4D6C-BB64-DC25C8C7A6FF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9} = {02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileWays.Entity", "AgileWays.Entity\AgileWays.Entity.csproj", "{02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 13
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://agileways.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AgileWays.Cqrs.Commanding\\AgileWays.Cqrs.Commanding.csproj
+		SccProjectTopLevelParentUniqueName1 = AgileWays.Cqrs.sln
+		SccProjectName1 = AgileWays.Cqrs.Commanding
+		SccLocalPath1 = AgileWays.Cqrs.Commanding
+		SccProjectUniqueName2 = AgileWays.Cqrs.Commands.Writer\\AgileWays.Cqrs.Commands.Writer.csproj
+		SccProjectTopLevelParentUniqueName2 = AgileWays.Cqrs.sln
+		SccProjectName2 = AgileWays.Cqrs.Commands.Writer
+		SccLocalPath2 = AgileWays.Cqrs.Commands.Writer
+		SccProjectUniqueName3 = AgileWays.Cqrs.Commands\\AgileWays.Cqrs.Commands.csproj
+		SccProjectTopLevelParentUniqueName3 = AgileWays.Cqrs.sln
+		SccProjectName3 = AgileWays.Cqrs.Commands
+		SccLocalPath3 = AgileWays.Cqrs.Commands
+		SccProjectUniqueName4 = AgileWays.Cqrs.Domain.Conference\\AgileWays.Cqrs.Domain.Conference.csproj
+		SccProjectTopLevelParentUniqueName4 = AgileWays.Cqrs.sln
+		SccProjectName4 = AgileWays.Cqrs.Domain.Conference
+		SccLocalPath4 = AgileWays.Cqrs.Domain.Conference
+		SccProjectUniqueName5 = AgileWays.Cqrs.Domain\\AgileWays.Cqrs.Domain.csproj
+		SccProjectTopLevelParentUniqueName5 = AgileWays.Cqrs.sln
+		SccProjectName5 = AgileWays.Cqrs.Domain
+		SccLocalPath5 = AgileWays.Cqrs.Domain
+		SccProjectUniqueName6 = AgileWays.Cqrs.Eventing.Handler\\AgileWays.Cqrs.Eventing.Handler.csproj
+		SccProjectTopLevelParentUniqueName6 = AgileWays.Cqrs.sln
+		SccProjectName6 = AgileWays.Cqrs.Eventing.Handler
+		SccLocalPath6 = AgileWays.Cqrs.Eventing.Handler
+		SccProjectUniqueName7 = AgileWays.Cqrs.Eventing\\AgileWays.Cqrs.Eventing.csproj
+		SccProjectTopLevelParentUniqueName7 = AgileWays.Cqrs.sln
+		SccProjectName7 = AgileWays.Cqrs.Eventing
+		SccLocalPath7 = AgileWays.Cqrs.Eventing
+		SccProjectUniqueName8 = AgileWays.Cqrs.Events\\AgileWays.Cqrs.Events.csproj
+		SccProjectTopLevelParentUniqueName8 = AgileWays.Cqrs.sln
+		SccProjectName8 = AgileWays.Cqrs.Events
+		SccLocalPath8 = AgileWays.Cqrs.Events
+		SccProjectUniqueName9 = AgileWays.Entity\\AgileWays.Entity.csproj
+		SccProjectTopLevelParentUniqueName9 = AgileWays.Cqrs.sln
+		SccProjectName9 = AgileWays.Entity
+		SccLocalPath9 = AgileWays.Entity
+		SccProjectUniqueName10 = AgileWays.Repository\\AgileWays.Repository.csproj
+		SccProjectTopLevelParentUniqueName10 = AgileWays.Cqrs.sln
+		SccProjectName10 = AgileWays.Repository
+		SccLocalPath10 = AgileWays.Repository
+		SccProjectUniqueName11 = CommandHost\\CommandHost.csproj
+		SccProjectTopLevelParentUniqueName11 = AgileWays.Cqrs.sln
+		SccProjectName11 = CommandHost
+		SccLocalPath11 = CommandHost
+		SccProjectUniqueName12 = ReservationConsole\\ReservationConsole.csproj
+		SccProjectTopLevelParentUniqueName12 = AgileWays.Cqrs.sln
+		SccProjectName12 = ReservationConsole
+		SccLocalPath12 = ReservationConsole
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25897D59-0EAE-432D-8D18-E5754BADF494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25897D59-0EAE-432D-8D18-E5754BADF494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25897D59-0EAE-432D-8D18-E5754BADF494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25897D59-0EAE-432D-8D18-E5754BADF494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E6C688-E04D-49B0-BE70-38F5651EA0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E6C688-E04D-49B0-BE70-38F5651EA0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E6C688-E04D-49B0-BE70-38F5651EA0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E6C688-E04D-49B0-BE70-38F5651EA0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA313D87-770D-41FB-A2DB-91C8C53C676A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA313D87-770D-41FB-A2DB-91C8C53C676A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA313D87-770D-41FB-A2DB-91C8C53C676A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA313D87-770D-41FB-A2DB-91C8C53C676A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5C1E6C7-2B11-4D44-9E87-4DD81B06014E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C1E6C7-2B11-4D44-9E87-4DD81B06014E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C1E6C7-2B11-4D44-9E87-4DD81B06014E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C1E6C7-2B11-4D44-9E87-4DD81B06014E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B578F6-4346-4050-8D3B-8B78146AB214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B578F6-4346-4050-8D3B-8B78146AB214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B578F6-4346-4050-8D3B-8B78146AB214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B578F6-4346-4050-8D3B-8B78146AB214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABCE536E-31DA-46DA-8352-395F4A6458BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCE536E-31DA-46DA-8352-395F4A6458BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCE536E-31DA-46DA-8352-395F4A6458BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCE536E-31DA-46DA-8352-395F4A6458BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1D2DFF-DEBC-408E-A004-58250AC245D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1D2DFF-DEBC-408E-A004-58250AC245D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1D2DFF-DEBC-408E-A004-58250AC245D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1D2DFF-DEBC-408E-A004-58250AC245D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8584768C-30FF-42E7-9D85-743CD57DCD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8584768C-30FF-42E7-9D85-743CD57DCD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8584768C-30FF-42E7-9D85-743CD57DCD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8584768C-30FF-42E7-9D85-743CD57DCD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4574567-012C-4BC7-83D5-0F50E5FD8679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4574567-012C-4BC7-83D5-0F50E5FD8679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4574567-012C-4BC7-83D5-0F50E5FD8679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4574567-012C-4BC7-83D5-0F50E5FD8679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF358621-2190-4D6C-BB64-DC25C8C7A6FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF358621-2190-4D6C-BB64-DC25C8C7A6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF358621-2190-4D6C-BB64-DC25C8C7A6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF358621-2190-4D6C-BB64-DC25C8C7A6FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4574567-012C-4BC7-83D5-0F50E5FD8679} = {DCE18939-E439-4ABD-8F6A-64312C0EE59C}
+		{FF1D2DFF-DEBC-408E-A004-58250AC245D5} = {BB87CD30-BD27-42B8-9785-613D03CF79FC}
+		{8584768C-30FF-42E7-9D85-743CD57DCD95} = {BB87CD30-BD27-42B8-9785-613D03CF79FC}
+		{96B578F6-4346-4050-8D3B-8B78146AB214} = {9D029129-61D7-419A-B1FD-69D625C6AE52}
+		{E7D6CD76-6BB9-4FD8-BB3F-E98D70CAEEC9} = {9D029129-61D7-419A-B1FD-69D625C6AE52}
+		{ABCE536E-31DA-46DA-8352-395F4A6458BA} = {9D029129-61D7-419A-B1FD-69D625C6AE52}
+		{CA313D87-770D-41FB-A2DB-91C8C53C676A} = {1CB511C0-DA86-4E38-BC33-18071E38D512}
+		{C5C1E6C7-2B11-4D44-9E87-4DD81B06014E} = {1CB511C0-DA86-4E38-BC33-18071E38D512}
+		{25897D59-0EAE-432D-8D18-E5754BADF494} = {0BBD1CA5-B085-4E60-BA87-B64DBB04D044}
+		{91E6C688-E04D-49B0-BE70-38F5651EA0E2} = {0BBD1CA5-B085-4E60-BA87-B64DBB04D044}
+		{02BAB642-EFF1-42D1-A91F-C4E6BBEC05D9} = {0BBD1CA5-B085-4E60-BA87-B64DBB04D044}
+		{AF358621-2190-4D6C-BB64-DC25C8C7A6FF} = {308D541E-5BFD-4722-BA7C-F81E9A1868DE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,47 @@
+﻿@model MvcWebRole1.Models.ReservationModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ReservationModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumberOfSeats)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumberOfSeats)
+            @Html.ValidationMessageFor(model => model.NumberOfSeats)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DiscountCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DiscountCode)
+            @Html.ValidationMessageFor(model => model.DiscountCode)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
